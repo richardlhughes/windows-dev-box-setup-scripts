@@ -42,10 +42,10 @@ To run a recipe script, click a link in the table below from your target machine
 |<a href='http://boxstarter.org/package/url?https://raw.githubusercontent.com/richardlhughes/windows-dev-box-setup-scripts/master/dev_ml_windows.ps1'>Machine Learning Windows</a>| Machine Learning with only Windows native tools        |
 |<a href='http://boxstarter.org/package/url?https://raw.githubusercontent.com/richardlhughes/windows-dev-box-setup-scripts/master/dev_ml_wsl.ps1'>Machine Learning Linux</a>| Machine Learning with Linux tools running on WSL        |
 |<a href='http://boxstarter.org/package/url?https://raw.githubusercontent.com/richardlhughes/windows-dev-box-setup-scripts/master/devops_azure.ps1'>DevOps Azure</a>| Client setup for DevOps with Azure      |
-|<a href='http://boxstarter.org/package/url?https://raw.githubusercontent.com/richardlhughes/windows-dev-box-setup-scripts/master/dev_dw.ps1'>Data Warehouse</a>| Developer setup for data warehouse develoepr      |
 |     | Xamarin (Visual Studio, Xamarin, Android SDK) |
 |     | Containers (Docker, Kubernetes, etc...)        |
 |     | Submit a PR with a recommended configuration!        |
+|<a href='http://boxstarter.org/package/url?https://raw.githubusercontent.com/richardlhughes/windows-dev-box-setup-scripts/master/dev_dw.ps1'>Data Warehouse</a>| Developer setup for data warehouse develoepr      |
 
 **Notes:**  
 1. If you are using WSL there's a followup step we recommend after running the setup script.  When the script finishes you will only have a root user with a blank password. You should  manually create a non-root user via `$ sudo adduser [USERNAME] sudo` 
