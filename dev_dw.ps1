@@ -4,6 +4,7 @@
 
 Disable-UAC
 
+
 # Get the base URI path from the ScriptToCall value
 $bstrappackage = "-bootstrapPackage"
 $helperUri = $Boxstarter['ScriptToCall']
@@ -13,9 +14,12 @@ $helperUri = $helperUri.TrimStart("'", " ")
 $helperUri = $helperUri.TrimEnd("'", " ")
 $helperUri = $helperUri.Substring(0, $helperUri.LastIndexOf("/"))
 $helperUri += "/scripts"
-$toolsUri = $helperUri += "/tools"
-$officeConfigurationFile = $toolsUri+"/configuration64excel.xml"
+$toolsUri = $helperUri 
+$toolsUri += "/tools"
+$officeConfigurationFile = $toolsUri
+$officeConfigurationFile += "/configuration64excel.xml"
 write-host "helper script base URI is $helperUri"
+write-host "office configuration file is $officeConfigurationFile"
 
 function executeScript
 {
