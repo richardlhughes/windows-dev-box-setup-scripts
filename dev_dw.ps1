@@ -13,6 +13,8 @@ $helperUri = $helperUri.TrimStart("'", " ")
 $helperUri = $helperUri.TrimEnd("'", " ")
 $helperUri = $helperUri.Substring(0, $helperUri.LastIndexOf("/"))
 $helperUri += "/scripts"
+$toolsUri = $helperUri += "/tools"
+$officeConfigurationFile = $toolsUri+"/configuration64excel.xml"
 write-host "helper script base URI is $helperUri"
 
 function executeScript
@@ -43,7 +45,7 @@ Update-SessionEnvironment #refreshing env due to Git install
 
 #--- installing Visual Studio tools ---
 choco install -y visualstudio2017-workload-data
-choco install -y ssdt17 --version 14.0.16174.0
+choco install -y ssdt17 --version 14.0.16174.0 --ia="'INSTALLALL'"
 
 #--- installing developer tools ---
 choco install -y notepadplusplus.install
@@ -51,7 +53,8 @@ choco install -y sql-server-management-studio
 choco install -y sqltoolbelt
 choco install -y tortoisegit
 choco install -y powerbi
-choco install -y office365-2016-deployment-tool -packageParameters "/64bit /Shared /LogPath:'C:\logs\'"
+#choco install -y office365-2016-deployment-tool -packageParameters "/64bit /Shared /LogPath:'C:\logs\'"
+choco install -y office365proplus -packageParameters "/configure $officeConfigurationFile"
 
 #--- add vscode extensions ---
 choco install -y vscode-gitlens

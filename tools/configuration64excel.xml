@@ -1,0 +1,11 @@
+<Configuration>
+    <Add OfficeClientEdition="64">
+        <Product ID="Excel2019Volume ">
+            <Language ID="MatchOS" />
+            <ExcludeApp ID= "Access" , "Groove", "Lync" , "OneDrive", "OneNote" , "Outlook", "PowerPoint", "Publisher", "Word"/>
+        </Product>
+    </Add>
+    <Updates Enabled="TRUE" />
+    <Display Level="None" AcceptEULA="TRUE" />
+    <Logging Path="%temp%" />
+</Configuration>
